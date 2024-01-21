@@ -8,7 +8,7 @@ function Footer() {
           <Container>
             <Row>
               <Col className="text-center py-3">
-               Copywrite &copy; myEcommerce
+                Copywrite &copy; myEcommerce
               </Col>
             </Row>
           </Container>

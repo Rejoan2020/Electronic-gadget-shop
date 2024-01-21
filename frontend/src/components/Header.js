@@ -1,26 +1,32 @@
-import React from 'react'
-import { Container,Nav,Navbar,NavDropdown } from 'react-bootstrap'
+import React from "react";
+import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import {LinkContainer} from "react-router-bootstrap";
 
 function Header() {
   return (
     <div>
-        <header>
+      <header>
         <Navbar bg="dark" variant="dark" expand="lg">
-      <Container>
-        <Navbar.Brand href="/">myEcommerce</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link href="/cart">cart</Nav.Link>
-            <Nav.Link href="/login">login</Nav.Link>
-              
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-        </header>
+          <Container>
+            <LinkContainer to='/'>
+              <Navbar.Brand>Meem Telecom</Navbar.Brand>
+            </LinkContainer>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="mr-auto">
+                <LinkContainer to="/cart">
+                  <Nav.Link>cart</Nav.Link>
+                </LinkContainer>
+                <LinkContainer to="/login">
+                  <Nav.Link>login</Nav.Link>
+                </LinkContainer>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+      </header>
     </div>
-  )
+  );
 }
 
-export default Header
+export default Header;
