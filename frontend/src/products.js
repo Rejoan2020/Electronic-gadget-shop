@@ -10,6 +10,8 @@ const products = [
     'Features': 'Side Fingerprint, 10W Fast Charging',
     'Price':'50000৳',
     'countInStock': 10,
+    'numReview':'1',
+    'rating':'1',
   },
   {
     '_id': '2',
@@ -21,6 +23,8 @@ const products = [
     'Features': '5000mAh Battery',
     'Price':'26000৳',
     'countInStock': 10,
+    'numReview':'4',
+    'rating':'1',
   },
   {
     '_id': '3',
@@ -32,6 +36,8 @@ const products = [
     'Features': '5000mAh Battery',
     'Price':'24000৳',
     'countInStock': 10,
+    'numReview':'4',
+    'rating':'1',
   },
   {
     '_id': '4',
@@ -43,6 +49,8 @@ const products = [
     'Features': '5000mAh Li-Ion Battery',
     'Price':'32000৳',
     'countInStock': 10,
+    'numReview':'4',
+    'rating':'5',
   },
   {
     '_id': '5',
@@ -54,6 +62,8 @@ const products = [
     'Features': '5000mAh Battery, 4GB Extended RAM',
     'Price':'50000৳',
     'countInStock': 10,
+    'numReview':'4',
+    'rating':'4',
   },
   {
     '_id': '6',
@@ -64,7 +74,9 @@ const products = [
     'Camera': 'Single 8MP on Rear, 5MP Front',
     'Features': 'Side-mounted Fingerprint, IPX4',
     'Price':'25000৳',
+    'numReview':'4',
     'countInStock': 0,
+    'rating':'3',
   },
   {
     '_id': '7',
@@ -76,6 +88,8 @@ const products = [
     'Features': 'IP54, Side Fingerprint, 18W Fast Charging',
     'Price':'35000৳',
     'countInStock': 10,
+    'numReview':'4',
+    'rating':'4',
   },
   {
     '_id': '8',
@@ -87,6 +101,8 @@ const products = [
     'Features': '5000mAh Battery',
     'Price':'20000৳',
     'countInStock': 10,
+    'numReview':'4',
+    'rating':'5',
   },
 ]
 

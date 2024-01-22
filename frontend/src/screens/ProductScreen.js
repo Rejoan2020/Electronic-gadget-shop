@@ -1,8 +1,8 @@
-import React from 'react'
-import Product from '../components/Product'
+import React from 'react' 
 import products from '../products'
 import { Link,useParams } from 'react-router-dom'
 import { Row,Col,Image,Card,Button,ListGroup,ListGroupItem } from 'react-bootstrap'
+import Rating from '../components/Rating'
 
 function ProductScreen() {
     // console.log(props.match.params.id)
@@ -15,10 +15,15 @@ function ProductScreen() {
                 <Col md={6}>
                     <Image src={prod.image} alt={prod.name} fluid></Image>
                 </Col>
-                <Col md={3  } className='my-4'>
+                <Col md={3} className='my-4'>
                     <ListGroup variant='flush'>
                         <ListGroupItem>
                             <h3>{prod.name}</h3>
+                        </ListGroupItem>
+                        <ListGroupItem>
+                            <Rating rating={prod.rating/prod.numReview *5} rev = {prod.numReview} color = {'#FFFF00'}>
+                            </Rating>
+                                out of {prod.numReview} Reviews
                         </ListGroupItem>
                         <ListGroupItem>
                             <h2><strong>Price:</strong> {prod.Price}</h2>
