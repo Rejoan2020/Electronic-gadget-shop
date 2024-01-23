@@ -31,34 +31,34 @@ function ProductScreen() {
                             <h3>{prod.name}</h3>
                         </ListGroupItem>
                         <ListGroupItem>
-                            <Rating rating={prod.rating/prod.numReview *5} rev = {prod.numReview} color = {'#FFFF00'}>
+                            <Rating rating={prod.rating} rev = {prod.numReview} color = {'#FFFF00'}>
                             </Rating>
-                                out of {prod.numReview} Reviews
+                                out of {prod.numReviews} Reviews
                         </ListGroupItem>
                         <ListGroupItem>
-                            <h2><strong>Price:</strong> {prod.Price}</h2>
+                            <h2><strong>Price:</strong> {prod.price}</h2>
                         </ListGroupItem>
                         <ListGroupItem>
-                            <strong>Display:</strong> {prod.Display}
-                        </ListGroupItem>
-                        
-                        <ListGroupItem>
-                        <strong>Processor:</strong> {prod.Processor}
+                            <strong>Display:</strong> {prod.display}
                         </ListGroupItem>
                         
                         <ListGroupItem>
-                        <strong>Camera:</strong> {prod.Camera}
+                        <strong>Processor:</strong> {prod.processor}
                         </ListGroupItem>
                         
                         <ListGroupItem>
-                        <strong>Features:</strong> {prod.Features}
+                        <strong>Camera:</strong> {prod.camera}
+                        </ListGroupItem>
+                        
+                        <ListGroupItem>
+                        <strong>Features:</strong> {prod.features}
                         </ListGroupItem>
                     </ListGroup>
                 </Col>
                 <Col md={3} className='my-5'>
                     <ListGroup>
                         <ListGroupItem>
-                            Price : {prod.Price}
+                            Price : {prod.price}
                         </ListGroupItem>
                         <ListGroupItem>
                             In stock : {prod.countInStock==0?"Out of stock":"Available"}
