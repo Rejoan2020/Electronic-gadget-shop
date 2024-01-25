@@ -4,6 +4,8 @@ import Product from '../components/Product'
 import axios from 'axios'
 import {useDispatch,useSelector} from 'react-redux'
 import {listProducts} from '../actions/productActions'
+import Loader from '../components/Loader'
+import ErrorMessage from '../components/ErrorMessage'
 
 function HomeScreen() {
   //using react-setstate
@@ -28,8 +30,8 @@ function HomeScreen() {
   return (
     <div>
       <h1>Products</h1>
-      {loading? <h3> Loading... </h3>
-      :error?<h3>{error}</h3>
+      {loading? <Loader/>
+      :error?<ErrorMessage vant = 'danger' child = {error}></ErrorMessage>
       :<Row>
       {products.map(product=>(
           <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
