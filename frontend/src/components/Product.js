@@ -11,14 +11,14 @@ function Product({product}) {
       </Link>
       <Card.Body>
         <Link to={`/product/${product._id}`}>
-          <strong>{product.name}</strong><br/>
+          <strong><h4>{product.name}</h4></strong><br/>
         </Link>
-          {product.Processor}<br/>
-          <Rating rating={product.rating/product.numReview * 5} rev = {product.numReview} color = {'#FFFF00'}/>
-          out of {product.numReview} Reviews
+          {product.processor}<br/>
+          <Rating rating={product.rating} rev = {product.numReviews} color = {'#FFFF00'}/>
+          out of {product.numReviews} Reviews
           <br/>
           <br/>
-          <h4>Price: {product.Price}</h4><br/>
+          <h4>Price: {product.price}</h4><br/>
       </Card.Body>
     </Card>
   )
