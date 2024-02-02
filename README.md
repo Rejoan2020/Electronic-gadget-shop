@@ -7,5 +7,7 @@
 - cd backend
 - python manage.py runserver
 <h4>For the frontend part (reactJS)</h4> 
-- cd frontend
-- npm install
+<ul>
+  <li>cd frontend</li>
+  <li>npm install</li>
+</ul>
