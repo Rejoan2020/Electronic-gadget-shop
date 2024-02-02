@@ -6,6 +6,6 @@
 - pip install -r requirements.txt
 - cd backend
 - python manage.py runserver
-# For the frontend part (reactJS)
+<h4>For the frontend part (reactJS)</h4> 
 - cd frontend
 - npm install
