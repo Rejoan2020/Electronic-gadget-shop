@@ -13,8 +13,7 @@ function CartScreen() {
   const dispatch = useDispatch()
 
   const cart = useSelector(state=>state.cart)
-  const {cartItems} = cart
-  // console.log(cartItems)
+  const {cartItems} = cart 
 
   useEffect(()=>{
     if(id){
@@ -33,7 +32,6 @@ function CartScreen() {
   }
   
   return (
-     
       <Row> 
         <Col md = {8}>
       <h1>Shopping cart</h1>
