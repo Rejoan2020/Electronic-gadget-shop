@@ -3,6 +3,13 @@ import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import {LinkContainer} from "react-router-bootstrap";
 
 function Header() {
+  const userLogin = useSelector(state => state.userLogin)
+  const { userInfo } = userLogin
+
+  const logoutHandler =() => {
+    console.log("logout")
+  }
+  
   return (
     <div>
       <header>
@@ -16,10 +23,21 @@ function Header() {
               <Nav className="mr-auto">
                 <LinkContainer to="/cart">
                   <Nav.Link>cart</Nav.Link>
-                </LinkContainer>
-                <LinkContainer to="/login">
-                  <Nav.Link>login</Nav.Link>
-                </LinkContainer>
+                </LinkContainer> 
+
+                {userInfo?(
+                  <NavDropdown title={userInfo.name} id = 'username'>
+                      <LinkContainer to='/profile'>
+                          <NavDropdown.Item>Profile</NavDropdown.Item>
+                      </LinkContainer>
+                      <NavDropdown.Item onClick={logoutHandler}>Logout</NavDropdown.Item>
+                  </NavDropdown>
+                ):(
+                    <LinkContainer to="/login">
+                      <Nav.Link><i className="fas fa-user"></i>login</Nav.Link>
+                    </LinkContainer>
+                )}
+
               </Nav>
             </Navbar.Collapse>
           </Container>
