@@ -11,14 +11,23 @@ import {
 
 } from '../constants/userConstants'
 
-export  const userLoginReducers = (state = { },action)=>{
+const initialState = {
+    isAuthenticated: false,
+    userInfo: JSON.parse(localStorage.getItem('userInfo')) || null,
+};
+
+// console.log(initialState)
+
+export  const userLoginReducers = (state = initialState,action)=>{
     switch(action.type){
         case USER_LOGIN_REQUEST:
             return {loading:true,}
         case USER_LOGIN_SUCCESS:
-            return {loading:false, userInfo: action.payload}
+            const userInfo = action.payload
+            console.log(userInfo)
+            return {loading:false, userInfo : action.payload,}
         case USER_LOGIN_FAIL:
-            return {loading:false, error:action.payload}
+            return {loading:false, error: action.payload}
         case USER_LOGOUT:
             return {}
         default :

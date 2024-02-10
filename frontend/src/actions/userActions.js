@@ -1,3 +1,4 @@
+import axios from 'axios'
 import {
     USER_LOGIN_FAIL,
     USER_LOGIN_REQUEST,
@@ -9,7 +10,6 @@ import {
 
     USER_LOGOUT,
 } from '../constants/userConstants'
-import axios from 'axios'
 
 
 export const login = (email, password) => async (dispatch) => {
@@ -44,6 +44,7 @@ export const login = (email, password) => async (dispatch) => {
             error.response.data.detail : error.message,
         })
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }
@@ -89,4 +90,11 @@ export const logout = () => (dispatch) =>{
     localStorage.removeItem('userInfo'); 
     dispatch({ type: USER_LOGOUT })
 >>>>>>> 58165e0 (feature: profile update feature added)
+=======
+}
+
+export const logout = () => (dispatch) =>{
+    localStorage.removeItem('userInfo'); 
+    dispatch({ type: USER_LOGOUT })
+>>>>>>> bb56c5d1445e0d26423df76b1c284e5d0e49067b
 }

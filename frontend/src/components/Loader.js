@@ -16,7 +16,6 @@ function Loader() {
                 }
             }
         >
-            <span className='sr-Only'> Loading... </span>
         </Spinner>
         </div>
     )
