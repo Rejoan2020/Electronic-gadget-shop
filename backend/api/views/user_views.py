@@ -10,7 +10,6 @@ from django.contrib.auth.hashers import make_password
 from rest_framework import status
 
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
-    print("log in reached")
     def validate(self, attrs):
         data = super().validate(attrs)
         # print(data)
@@ -27,16 +26,18 @@ class MyTokenObtainPairView(TokenObtainPairView):
 def registerUser(request):
     data = request.data
     try:
+        print("try in")
         user = User.objects.create(
             first_name = data['name'],
-            username = data['email'],
-            password = make_password(data['password']),
-            email = data['email'],
+            username = data['username'],
+            password = data['password'],
+            email = data['username'],
         )
         serializer = UserSerializerWithToken(user,many = False)
+        print("reg in")
         return Response(serializer.data)
     except:
-        message = {'detail': 'User with this email already exists'}
+        message = {'detail': 'User with this email already exists!'}
         return Response(message,status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['GET'])
@@ -46,10 +47,27 @@ def getUserProfile(request):
     serializer = UserSerializer(user, many=False)
     return Response(serializer.data)
 
+@api_view(['PUT'])
+@permission_classes([IsAuthenticated])
+def updateUserProfile(request):
+    user = request.user
+    serializer = UserSerializerWithToken(user, many=False)
+    data = request.data
+
+    user.first_name = data['name']
+    user.username = data['email']
+    user.email = data['email']
+
+    if data['password'] != '':
+        make_password(data['password'])
+
+    user.save()
+    
+    return Response(serializer.data)
+
 @api_view(['GET'])
 @permission_classes([IsAdminUser]) 
 def getUsers(request):
-    print("in")
     users = User.objects.all()
     serializer = UserSerializer(users, many=True)
     return Response(serializer.data)
