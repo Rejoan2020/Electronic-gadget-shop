@@ -43,10 +43,7 @@ export const login = (email, password) => async (dispatch) => {
             payload: error.response && error.response.data.detail?
             error.response.data.detail : error.message,
         })
-    }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+    } 
 }
 
 
@@ -88,50 +85,5 @@ export const register = (name, email, password) => async (dispatch) => {
 }
 export const logout = () => (dispatch) =>{
     localStorage.removeItem('userInfo'); 
-    dispatch({ type: USER_LOGOUT })
->>>>>>> 58165e0 (feature: profile update feature added)
-=======
-}
-
-
-export const register = (name, email, password) => async (dispatch) => {
-    try{
-        dispatch({
-            type: USER_REGISTER_REQUEST
-        })
-        const config = {
-            headers:{
-                'Content-type':'application/json'
-            }
-        } 
-        const {data} = await axios.post( 
-            '/api/users/register/',
-            {'name': name, 'username':email, 'password':password},
-            config
-        ) 
-
-        dispatch({
-            type: USER_REGISTER_SUCCESS,
-            payload: data
-        });
-
-        dispatch({
-            type: USER_LOGIN_SUCCESS,
-            payload: data
-        });
-        // console.log(data)
-        localStorage.setItem('userInfo', JSON.stringify(data));
-        
-    }catch (error){
-        dispatch({
-            type: USER_REGISTER_FAIL,
-            payload: error.response && error.response.data.detail?
-            error.response.data.detail : error.message,
-        })
-    }
-}
-export const logout = () => (dispatch) =>{
-    localStorage.removeItem('userInfo'); 
-    dispatch({ type: USER_LOGOUT })
->>>>>>> bb56c5d1445e0d26423df76b1c284e5d0e49067b
+    dispatch({ type: USER_LOGOUT }) 
 }

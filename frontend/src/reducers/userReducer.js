@@ -16,8 +16,6 @@ const initialState = {
     userInfo: JSON.parse(localStorage.getItem('userInfo')) || null,
 };
 
-// console.log(initialState)
-
 export  const userLoginReducers = (state = initialState,action)=>{
     switch(action.type){
         case USER_LOGIN_REQUEST:
@@ -50,24 +48,4 @@ export  const userRegisterReducers = (state = {},action)=>{
         default :
             return state
     }
-<<<<<<< HEAD
-}
-
-export  const userRegisterReducers = (state = {},action)=>{
-    switch(action.type){
-        case USER_REGISTER_REQUEST:
-            return {loading:true,}
-        case USER_REGISTER_SUCCESS:
-            const userInfo = action.payload
-            console.log(userInfo)
-            return {loading:false, userInfo : action.payload,}
-        case USER_REGISTER_FAIL:
-            return {loading:false, error: action.payload}
-        case USER_LOGOUT:
-            return {}
-        default :
-            return state
-    }
-=======
->>>>>>> main
 }
