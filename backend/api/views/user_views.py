@@ -10,7 +10,6 @@ from django.contrib.auth.hashers import make_password
 from rest_framework import status
 
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
-    print("log in reached")
     def validate(self, attrs):
         data = super().validate(attrs)
         # print(data)
@@ -69,7 +68,6 @@ def updateUserProfile(request):
 @api_view(['GET'])
 @permission_classes([IsAdminUser]) 
 def getUsers(request):
-    print("in")
     users = User.objects.all()
     serializer = UserSerializer(users, many=True)
     return Response(serializer.data)

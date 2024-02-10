@@ -50,6 +50,7 @@ export  const userRegisterReducers = (state = {},action)=>{
         default :
             return state
     }
+<<<<<<< HEAD
 }
 
 export  const userRegisterReducers = (state = {},action)=>{
@@ -67,4 +68,6 @@ export  const userRegisterReducers = (state = {},action)=>{
         default :
             return state
     }
+=======
+>>>>>>> main
 }
