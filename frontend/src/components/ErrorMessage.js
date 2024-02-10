@@ -1,12 +1,8 @@
 import React from 'react'
 import { Alert } from 'react-bootstrap'
 
-function ErrorMessage({vant,child}) {
-  return (
-    <Alert variant={vant}>
-      {child}
-    </Alert>
-  )
-}
+const ErrorMessage = ({ variant, children }) => {
+  return <Alert variant={variant}>{children}</Alert>;
+};
 
 export default ErrorMessage
