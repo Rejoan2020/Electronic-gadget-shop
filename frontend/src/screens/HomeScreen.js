@@ -6,26 +6,20 @@ import {useDispatch,useSelector} from 'react-redux'
 import {listProducts} from '../actions/productActions'
 import Loader from '../components/Loader'
 import ErrorMessage from '../components/ErrorMessage'
+import { useLocation, useNavigate } from 'react-router-dom'
 
-function HomeScreen() {
-  //using react-setstate
-  // const [products,setProducts] = useState([]);
-  // useEffect(()=>{
-  //   async function fetchProducts(){
-  //     const { data } = await axios.get('/api/products/')
-  //     setProducts(data)
-  //   }
-  //   fetchProducts();
-  // },[])
-
-  //using redux
+function HomeScreen({history}) { 
   const dispatch = useDispatch();
   const productList = useSelector(state=>state.productList)
   const {error,loading,products} = productList
+
+  const location = useLocation();
+  let keyword = location.search;
+  console.log(keyword)
+
   useEffect(()=>{
-    dispatch(listProducts())
-  },[])
-  // const products =[];
+    dispatch(listProducts(keyword))
+  },[dispatch,keyword]) 
 
   return (
     <div>
