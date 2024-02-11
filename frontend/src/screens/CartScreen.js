@@ -28,7 +28,7 @@ function CartScreen() {
   let totalItem = 0, totalPrice = 0;
   for(let i=0;i<cartItems.length;i++){
     totalItem += parseInt(cartItems[i].quantity)
-    totalPrice += parseInt(cartItems[i].price)
+    totalPrice += (parseInt(cartItems[i].price) * parseInt(cartItems[i].quantity))
   }
   
   return (
@@ -80,7 +80,7 @@ function CartScreen() {
               </ListGroup.Item>
             </ListGroup>
 
-            <ListGroup.Item className="text-center">
+            <ListGroup.Item className="text-center py-3">
               <Button type='button' className='btn-block' disabled={cartItems.length===0}>
                 Proceed to checkout
               </Button>

@@ -6,19 +6,20 @@ import {useDispatch,useSelector} from 'react-redux'
 import {listProducts} from '../actions/productActions'
 import Loader from '../components/Loader'
 import ErrorMessage from '../components/ErrorMessage'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
-function HomeScreen() { 
+function HomeScreen({history}) { 
   const dispatch = useDispatch();
   const productList = useSelector(state=>state.productList)
   const {error,loading,products} = productList
 
-  let keyword = useNavigate();
-  // console.log(keyword)
+  const location = useLocation();
+  let keyword = location.search;
+  console.log(keyword)
 
   useEffect(()=>{
-    dispatch(listProducts())
-  },[]) 
+    dispatch(listProducts(keyword))
+  },[dispatch,keyword]) 
 
   return (
     <div>
