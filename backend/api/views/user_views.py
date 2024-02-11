@@ -10,6 +10,7 @@ from django.contrib.auth.hashers import make_password
 from rest_framework import status
 
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
+    # print("log in reached")
     def validate(self, attrs):
         data = super().validate(attrs)
         # print(data)
@@ -26,7 +27,7 @@ class MyTokenObtainPairView(TokenObtainPairView):
 def registerUser(request):
     data = request.data
     try:
-        print("try in")
+        # print("try in")
         user = User.objects.create(
             first_name = data['name'],
             username = data['username'],
@@ -34,7 +35,7 @@ def registerUser(request):
             email = data['username'],
         )
         serializer = UserSerializerWithToken(user,many = False)
-        print("reg in")
+        # print("reg in")
         return Response(serializer.data)
     except:
         message = {'detail': 'User with this email already exists!'}
@@ -53,14 +54,12 @@ def updateUserProfile(request):
     user = request.user
     serializer = UserSerializerWithToken(user, many=False)
     data = request.data
-
+    print(data)
     user.first_name = data['name']
     user.username = data['email']
-    user.email = data['email']
-
+    user.email = data['email'] 
     if data['password'] != '':
-        make_password(data['password'])
-
+        user.set_password(data['password']) 
     user.save()
     
     return Response(serializer.data)
@@ -68,6 +67,7 @@ def updateUserProfile(request):
 @api_view(['GET'])
 @permission_classes([IsAdminUser]) 
 def getUsers(request):
+    print("in")
     users = User.objects.all()
     serializer = UserSerializer(users, many=True)
     return Response(serializer.data)
