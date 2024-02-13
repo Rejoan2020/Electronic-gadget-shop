@@ -1,17 +1,18 @@
-Todo App: A basic Todo web-application.
+Electronic-gedget-shop: An ecomerse-site which is expecially for electronic device.
 
-Front-end is made with reactJS and the backend is handled by django rest framework.
+Front-end is made with Javascript,reactJS,Redux and the backend is handled by Python,django rest framework,Sqlite3 etc.
 
 Key features
-- Create
-- Read
-- Update
-- Delete
+- Home and Product Screen.
+- User login, logout, registration.
+- User profile update.
+- Full featured cart system
+- Search for products etc.
+- *Order pyament process & user review system ( Currently working on)
+- *Custom admin panel (Currently working on)
+  
 
-CRUD operations with django rest framework is implemented along with the front-end by reactJS.Besides, JSX,HTML,CSS,Bootstrap are used to build this site.
-
-![0](https://github.com/Rejoan2020/TodoList-with-RESTapi/assets/63773925/8abc22cf-7e59-43c9-b39c-5f89dddba80d)
-
+![ecom](https://github.com/Rejoan2020/Electronic-gadget-shop/assets/63773925/34c41aa1-d90a-4a33-bdf8-cf0268be16ad)
 
 # Download & Setup Instructions
 - Clone project: git clone https://github.com/Rejoan2020/Electronic-gadget-shop.git
@@ -28,14 +29,14 @@ CRUD operations with django rest framework is implemented along with the front-e
   <li>npm start</li>
 </ul>
 
-
-![17 01 2024_01 59 20_REC-ezgif com-video-to-gif-converter](https://github.com/Rejoan2020/TodoList-with-RESTapi/assets/63773925/84dd956d-93b0-4c43-89ef-be08dccd62c9)
-
+![11 02 2024_23 03 37_REC-ezgif com-video-to-gif-converter](https://github.com/Rejoan2020/Electronic-gadget-shop/assets/63773925/c49060f6-387d-4fb8-91ad-8c1d6379f5b8)
 
 Contribution
 
 As a free and open-source project, we are grateful to anyone who wants to contribute. 
 
 Md. Rejoanur Rahman Apu
+Shajib Hossain
+Arifur Rahman
  
 
