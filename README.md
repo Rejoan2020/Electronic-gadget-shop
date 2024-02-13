@@ -2,6 +2,9 @@ Electronic-gedget-shop: An ecomerse-site which is expecially for electronic devi
 
 Front-end is made with Javascript,reactJS,Redux and the backend is handled by Python,django rest framework,Sqlite3 etc.
 
+
+![ecom](https://github.com/Rejoan2020/Electronic-gadget-shop/assets/63773925/34c41aa1-d90a-4a33-bdf8-cf0268be16ad)
+
 Key features
 - Home and Product Screen.
 - User login, logout, registration.
@@ -11,8 +14,7 @@ Key features
 - *Order pyament process & user review system ( Currently working on)
 - *Custom admin panel (Currently working on)
   
-
-![ecom](https://github.com/Rejoan2020/Electronic-gadget-shop/assets/63773925/34c41aa1-d90a-4a33-bdf8-cf0268be16ad)
+![11 02 2024_23 03 37_REC-ezgif com-video-to-gif-converter](https://github.com/Rejoan2020/Electronic-gadget-shop/assets/63773925/c49060f6-387d-4fb8-91ad-8c1d6379f5b8)
 
 # Download & Setup Instructions
 - Clone project: git clone https://github.com/Rejoan2020/Electronic-gadget-shop.git
@@ -29,7 +31,6 @@ Key features
   <li>npm start</li>
 </ul>
 
-![11 02 2024_23 03 37_REC-ezgif com-video-to-gif-converter](https://github.com/Rejoan2020/Electronic-gadget-shop/assets/63773925/c49060f6-387d-4fb8-91ad-8c1d6379f5b8)
 
 Contribution
 
