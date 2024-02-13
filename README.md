@@ -1,4 +1,4 @@
-# Electronic-gedget-shop: An ecomerse-site which is expecially for electronic device.
+# Electronic-gedget-shop: An e-comerse site which is especially for electronic device.
 
 - Front-end is made with Javascript,reactJS,Redux and the backend is handled by Python,django rest framework,Sqlite3 etc.
 
