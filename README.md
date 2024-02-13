@@ -1,11 +1,11 @@
-Electronic-gedget-shop: An ecomerse-site which is expecially for electronic device.
+#Electronic-gedget-shop: An ecomerse-site which is expecially for electronic device.
 
-Front-end is made with Javascript,reactJS,Redux and the backend is handled by Python,django rest framework,Sqlite3 etc.
+- Front-end is made with Javascript,reactJS,Redux and the backend is handled by Python,django rest framework,Sqlite3 etc.
 
 
 ![ecom](https://github.com/Rejoan2020/Electronic-gadget-shop/assets/63773925/34c41aa1-d90a-4a33-bdf8-cf0268be16ad)
 
-Key features
+#Key features
 - Home and Product Screen.
 - User login, logout, registration.
 - User profile update.
