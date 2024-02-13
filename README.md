@@ -36,8 +36,8 @@ Contribution
 
 As a free and open-source project, we are grateful to anyone who wants to contribute. 
 
-Md. Rejoanur Rahman Apu
-Shajib Hossain
-Arifur Rahman
+- Md. Rejoanur Rahman Apu
+- Shajib Hossain
+- Arifur Rahman
  
 
