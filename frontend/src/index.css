@@ -11,3 +11,61 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.ant-pagination {
+  text-align: center;
+  margin: 10px 0;
+  padding: 20px 0;
+}
+
+.ant-pagination-prev,
+.ant-pagination-next {
+  background-color: black !important;
+  height: 40px;
+  width: 40px;
+  margin: 0 5px;
+}
+
+.ant-pagination-prev button,
+.ant-pagination-next button {
+  color: white !important;
+  font-size: 25px;
+}
+
+.ant-pagination-item {
+  background-color: white !important;
+  border: 1px solid #343A40 !important;
+  vertical-align: middle;
+  margin: 0 5px;
+}
+
+.ant-pagination-item a {
+  color: #343A40 !important;
+}
+
+
+.ant-pagination-item:hover {
+  background-color: white;
+  color: #343A40 !important;
+}
+
+.ant-pagination-item:hover a {
+  color: #343A40 !important;
+}
+
+.ant-pagination-item-active {
+  background-color: #343A40 !important;
+}
+
+.ant-pagination-item-active a {
+  color: white !important;
+}
+
+.ant-pagination-item-active:hover {
+  background-color: #343A40 !important;
+}
+
+.ant-pagination-item-active:hover a {
+  color: white !important;
+}
